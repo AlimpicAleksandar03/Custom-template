@@ -221,5 +221,22 @@
         </section>
       </main>
     </div>
+
+    <script>
+      const triggers = document.querySelectorAll('.toggle');
+        const handleClick = event => {
+          event.preventDefault();
+          const href = event.target.getAttribute('href');
+          const target = document.querySelector(href);
+          const isActive = target.classList.contains('active');
+          if (isActive) {
+            target.classList.remove('active');
+          } else {
+            target.classList.add('active');
+          }
+        };
+        const addClickListener = node => node.addEventListener('click', handleClick);
+        triggers.forEach(addClickListener);
+    </script>
   </body>
 </html>
