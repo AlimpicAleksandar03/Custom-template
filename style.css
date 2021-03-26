@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+body :is(h1, h2, h3, h4, h5, h6) {
+  color: #3d4449;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
 .wrapper {
   display: flex;
   flex-direction: row-reverse;
@@ -12,7 +19,6 @@
 
 main {
   width: 80%;
-  border: 1px solid red;
 }
 /* center the main content */
 main > * {
@@ -27,53 +33,39 @@ main > * {
 .first-section {
   display: flex;
   justify-content: space-between;
-  border: 4px solid black;
 }
 
 .first-section .text {
-  background: red;
   height: 480px;
-}
-
-.first-section .picture {
-  background: blue;
-  height: 460px;
+  position: relative;
 }
 
 .second-section {
   margin-top: 70px;
-  border: 4px solid black;
 }
 
-.second-section-header {
+section :is(.second-section-header, .picture-small, .third-section-header) {
   height: 120px;
-  background: red;
 }
 
-.small-grid,
-.large-grid {
+section :is (.small-grid,.large-grid) {
   display: flex;
   flex-direction: column;
 }
 
-.flex-grid,
-.flex-grid-large {
-  width: 100%;
+section :is(.flex-grid-large, .flex-grid, ) {
+  width: 110%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.small-grid-container,
-.large-grid-container {
-  width: 48%;
-  background: rgb(0, 4, 255);
+section :is(.small-grid-container, .large-grid-container) {
+  margin-bottom: 50px;
 }
 
 .picture-small {
-  border: 1px solid red;
   float: left;
-  height: 120px;
   width: 170px;
 }
 
@@ -83,24 +75,14 @@ main > * {
 
 .third-section {
   margin-top: 70px;
-  border: 4px solid black;
 }
 
-.third-section-header {
+section :is(.third-section, .picture-large img) {
   width: 100%;
-  height: 120px;
-  background: blue;
 }
 
 .flex-grid-large {
   margin: 0;
-  background: red;
-}
-
-.large-grid-container {
-  background: red;
-  border: 4px solid black;
-  position: relative;
 }
 
 .picture-tall {
@@ -113,20 +95,121 @@ main > * {
 }
 
 .button {
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   background-color: transparent;
   border-radius: 0.375em;
   border: 0;
   box-shadow: inset 0 0 0 2px #f56a6a;
-  color: #f56a6a !important;
+  color: #f56a6a;
   cursor: pointer;
-  display: inline-block;
-  font-family: "Roboto Slab", serif;
-  font-size: 0.8em;
-  font-weight: 700;
   height: 3.5em;
-  letter-spacing: 0.075em;
-  line-height: 3.5em;
   padding: 0 2.25em;
-  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
 }
+
+.learn-more {
+  width: 180px;
+  position: absolute;
+  bottom: 0;
+}
+
+.text p {
+  margin-bottom: 20px;
+}
+
+img {
+  border-radius: 0.375em;
+}
+
+.large-grid-container p {
+  width: 70%;
+  overflow: hidden;
+}
+
+.small-grid-container p {
+  width: 80%;
+}
+
+.picture {
+  margin-right: 40px;
+}
+
+.main-header {
+  margin-bottom: 80px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header ul {
+  display: flex;
+  list-style: none;
+}
+
+.main-header ul li {
+  padding: 8px;
+  margin-left: 10px;
+}
+
+.sidebar {
+  width: 26em;
+}
+
+  /* {  
+  outline: 1px solid rgba(255, 0, 0, 0.2);
+  :hover {
+    outline: 1px solid rgba(255, 0, 0, 0.6);
+  }
+}
+* * {
+  outline: 1px solid rgba(0, 255, 0, 0.2);
+  :hover {
+    outline: 1px solid rgba(0, 255, 0, 0.6);
+  }
+}
+* * * {
+  outline: 1px solid rgba(0, 0, 255, 0.2);
+  :hover {
+    outline: 1px solid rgba(0, 0, 255, 0.6);
+  }
+}
+* * * * {
+  outline: 1px solid rgba(255, 0, 255, 0.2);
+  :hover {
+    outline: 1px solid rgba(255, 0, 0, 0.6);
+  }
+}
+* * * * * {
+  outline: 1px solid rgba(0, 255, 255, 0.2);
+  :hover {
+    outline: 1px solid rgba(0, 255, 0, 0.6);
+  }
+}
+* * * * * * {
+  outline: 1px solid rgba(255, 255, 0, 0.2);
+  :hover {
+    outline: 1px solid rgba(0, 0, 255, 0.6);
+  }
+}
+* * * * * * * {
+  outline: 1px solid rgba(255, 0, 0, 0.2);
+  :hover {
+    outline: 1px solid rgba(255, 0, 0, 0.6);
+  }
+}
+* * * * * * * * {
+  outline: 1px solid rgba(0, 255, 0, 0.2);
+  :hover {
+    outline: 1px solid rgba(0, 255, 0, 0.6);
+  }
+}
+* * * * * * * * * {
+  outline: 1px solid rgba(0, 0, 255, 0.2);
+  :hover {
+    outline: 1px solid rgba(0, 0, 255, 0.6);
+  }
+}
+*/
